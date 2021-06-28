@@ -54,5 +54,5 @@ def compute_correlations(journal):
 def diagnose(journal):
     corr = compute_correlations(journal)
     max_eve = max(corr, key=corr.get)
-    min_eve = max(corr, key=corr.get)
+    min_eve = min(corr, key=corr.get)
     return max_eve, min_eve
