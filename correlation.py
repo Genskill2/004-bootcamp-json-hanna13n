@@ -47,7 +47,7 @@ def compute_correlations(journal):
     for i in data:
         for j in i["events"]:
             if j not in corr.keys():
-                corr[j] = compute_phi(data, j)
+                corr[j] = compute_phi(journal, j)
     return corr
 
 
