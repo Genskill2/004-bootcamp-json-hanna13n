@@ -10,8 +10,7 @@ def load_journal(journal):
     return data
 
 
-def compute_phi(journal, eve):
-    data = load_journal(journal)
+def compute_phi(data, eve):
     n11 = 0
     n00 = 0
     n10 = 0
@@ -21,7 +20,7 @@ def compute_phi(journal, eve):
     n_1 = 0
     n_0 = 0
     for i in data:
-        if (i["squirrel"]):
+        if (i['squirrel']):
             n1_ += 1
             if (eve in i["events"]):
                 n11 += 1
