@@ -10,7 +10,8 @@ def load_journal(journal):
     return data
 
 
-def compute_phi(data, eve):
+def compute_phi(journal, eve):
+    data = load_journal(journal)
     n11 = 0
     n00 = 0
     n10 = 0
